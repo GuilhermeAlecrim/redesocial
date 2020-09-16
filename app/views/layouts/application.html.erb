@@ -1,15 +1,45 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Redesocial</title>
+    <title><%= yield(:title) %> | Rede Social</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
-    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <%= stylesheet_pack_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
-  </head>
-
-  <body>
+    </head>
+    
+    <body>
+      
+      <header class="header">
+        <div class="container">
+          <nav class="level">
+            <div class="level-left">
+              <div class="level-item">
+                Rede Social
+              </div>
+            </div>
+             <div class="level-right">
+              <p class="level-item">
+                <!--%= link_to("Manage Users", users_path, :class => "button is-dark is-outlined") %>-->
+              </p>
+            </div>
+          </nav>
+        </div>
+      </header>
+      
+<section class="section">
+  <div class="container">
     <%= yield %>
-  </body>
-</html>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    Copyright © 2020 Rede Social. All rights reserved.
+  </div>
+</footer>
+
+    </body>
+  </html>
